@@ -2,6 +2,8 @@
 " Annule la compatibilite avec l’ancetre Vi : totalement indispensable
 set nocompatible
 
+call pathogen#infect()
+
 " -- Affichage
 set title "Met a jour le titre de votre fenetre ou de votre terminal
 set number "Affiche le numero des lignes
@@ -26,6 +28,8 @@ set backspace=indent,eol,start
 " Cache les fichiers lors de l’ouverture d’autres fichiers
 set hidden
 
+"set background=dark
+"colorscheme solarized
 " Active la coloration syntaxique
 syntax enable
 " Active les comportements specifiques aux types de fichiers comme
@@ -36,7 +40,7 @@ filetype indent on
 
 set guifont=Ubuntu\ Mono
 set antialias
-call pathogen#infect()
+autocmd vimenter * highlight LineNr ctermfg=0
 
 " type de listing pour netrw
 let g:netrw_liststyle=3
