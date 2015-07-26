@@ -37,10 +37,16 @@ filetype indent on
 set guifont=Ubuntu\ Mono
 set antialias
 call pathogen#infect()
-" Activation de NERDTree au lancement de vim
-"autocmd vimenter * NERDTree
+
+" type de listing pour netrw
 let g:netrw_liststyle=3
+
+" switch entre les tab
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
+
+" map leader
 let mapleader = ","
+
+" combinaison pour ctrlp
 let g:ctrlp_map = '<leader>c'
