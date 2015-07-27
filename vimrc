@@ -3,7 +3,7 @@
 set nocompatible
 
 call pathogen#infect()
-
+autocmd vimenter * NERDTree
 " -- Affichage
 set title "Met a jour le titre de votre fenetre ou de votre terminal
 set number "Affiche le numero des lignes
