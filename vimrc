@@ -57,3 +57,5 @@ let g:ctrlp_map = '<leader>c'
 
 " alias pour save avec sudo --> :sudow
 cnoreabbrev sudow w !sudo tee %
+set tabstop=4
+
