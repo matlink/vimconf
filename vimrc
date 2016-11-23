@@ -3,7 +3,6 @@
 set nocompatible
 
 call pathogen#infect()
-autocmd vimenter * NERDTree
 " -- Affichage
 set title "Met a jour le titre de votre fenetre ou de votre terminal
 set number "Affiche le numero des lignes
@@ -40,7 +39,10 @@ filetype indent on
 
 set guifont=Ubuntu\ Mono
 set antialias
-autocmd vimenter * highlight LineNr ctermfg=0
+
+" Run nerdtree when nofile specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " type de listing pour netrw
 let g:netrw_liststyle=3
@@ -57,5 +59,8 @@ let g:ctrlp_map = '<leader>c'
 
 " alias pour save avec sudo --> :sudow
 cnoreabbrev sudow w !sudo tee %
-set tabstop=4
+set autoindent
+set smartindent
+set expandtab
 
+au BufNewFile,BufRead *.sage set filetype=python
