@@ -34,7 +34,7 @@ syntax enable
 " Active les comportements specifiques aux types de fichiers comme
 " la syntaxe et l’indentation
 filetype on
-filetype plugin on
+"filetype plugin on
 filetype indent on
 
 set guifont=Ubuntu\ Mono
@@ -61,6 +61,6 @@ let g:ctrlp_map = '<leader>c'
 cnoreabbrev sudow w !sudo tee %
 set autoindent
 set smartindent
-set expandtab
+set tabstop=4
 
 au BufNewFile,BufRead *.sage set filetype=python
