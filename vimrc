@@ -52,6 +52,8 @@ let g:netrw_liststyle=3
 " switch entre les tab
 map <F7> :tabp<CR>
 map <F8> :tabn<CR>
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
 
 " map leader
 let mapleader = ","
