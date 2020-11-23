@@ -44,6 +44,8 @@ set antialias
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+autocmd FileType markdown set spell spelllang=fr
+
 " type de listing pour netrw
 let g:netrw_liststyle=3
 
